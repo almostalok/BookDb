@@ -24,7 +24,7 @@ export function ParallaxImage({ src, className, speed = 0.5 }: ParallaxImageProp
         src={src}
         alt="Book"
         fill
-        className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
+        className="object-cover transition-all duration-700 hover:scale-105"
         sizes="(max-width: 768px) 100vw, 50vw"
       />
     </motion.div>

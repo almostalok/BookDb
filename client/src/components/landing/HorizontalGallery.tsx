@@ -27,10 +27,10 @@ export function HorizontalGallery() {
               src={src}
               alt={`Book ${i + 1}`}
               fill
-              className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
+              className="object-cover transition-all duration-500 hover:scale-110"
               sizes="200px"
             />
-            <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-violet-950/70 via-transparent to-amber-500/20" />
           </motion.div>
         ))}
       </motion.div>

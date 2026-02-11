@@ -31,7 +31,7 @@ export default function LandingPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-neutral-950 text-neutral-100 overflow-x-hidden">
+    <div className="min-h-screen bg-linear-to-br from-neutral-950 via-violet-950/30 to-neutral-950 text-neutral-100 overflow-x-hidden">
       <ScrollProgress />
 
       {/* Grain overlay */}
@@ -79,14 +79,14 @@ export default function LandingPage() {
         className="relative min-h-screen flex items-center justify-center"
       >
         {/* Background image grid */}
-        <div className="absolute inset-0 grid grid-cols-3 gap-1 opacity-20">
+        <div className="absolute inset-0 grid grid-cols-3 gap-1 opacity-40">
           {BOOK_IMAGES.slice(0, 3).map((src, i) => (
             <div key={i} className="relative overflow-hidden">
               <Image
                 src={src}
                 alt=""
                 fill
-                className="object-cover grayscale scale-110"
+                className="object-cover scale-110"
                 sizes="33vw"
                 priority
               />
@@ -94,14 +94,14 @@ export default function LandingPage() {
           ))}
         </div>
 
-        <div className="absolute inset-0 bg-linear-to-b from-neutral-950/80 via-neutral-950/60 to-neutral-950" />
+        <div className="absolute inset-0 bg-linear-to-b from-neutral-950/90 via-violet-950/60 to-neutral-950" />
 
         <div className="relative z-10 text-center px-8 max-w-5xl mx-auto">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xs tracking-[0.3em] uppercase text-neutral-400 mb-8"
+            className="text-xs tracking-[0.3em] uppercase text-amber-400 mb-8"
           >
             A social sanctuary for readers
           </motion.p>
@@ -111,7 +111,7 @@ export default function LandingPage() {
               initial={{ opacity: 0, y: 60 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              className="block"
+              className="block text-gradient"
             >
               Stories
             </motion.span>
@@ -119,7 +119,7 @@ export default function LandingPage() {
               initial={{ opacity: 0, y: 60 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-              className="block text-neutral-500"
+              className="block text-violet-300"
             >
               Shared
             </motion.span>
@@ -135,13 +135,13 @@ export default function LandingPage() {
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="group relative px-12 py-5 border border-neutral-100 text-xs tracking-[0.2em] uppercase overflow-hidden"
+                className="group relative px-12 py-5 border border-amber-500 text-xs tracking-[0.2em] uppercase overflow-hidden glow-amber"
               >
                 <span className="relative z-10 group-hover:text-neutral-950 transition-colors duration-300">
                   Begin Your Journey
                 </span>
                 <motion.div
-                  className="absolute inset-0 bg-neutral-100"
+                  className="absolute inset-0 bg-linear-to-r from-amber-500 to-amber-400"
                   initial={{ y: "100%" }}
                   whileHover={{ y: 0 }}
                   transition={{ duration: 0.3 }}
@@ -160,16 +160,16 @@ export default function LandingPage() {
             <motion.div
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 1.5, repeat: Infinity }}
-              className="w-px h-16 bg-linear-to-b from-neutral-100 to-transparent"
+              className="w-px h-16 bg-linear-to-b from-amber-400 to-transparent"
             />
           </motion.div>
         </div>
       </motion.section>
 
       {/* Horizontal Book Gallery */}
-      <section className="py-24 bg-neutral-900">
+      <section className="py-24 bg-linear-to-br from-neutral-900 via-indigo-950/20 to-neutral-900">
         <RevealSection className="max-w-7xl mx-auto px-8 mb-12">
-          <p className="text-xs tracking-[0.3em] uppercase text-neutral-500 mb-4">
+          <p className="text-xs tracking-[0.3em] uppercase text-amber-500 mb-4">
             Curated Collection
           </p>
           <h2 className="text-4xl md:text-5xl font-extralight">
@@ -185,11 +185,11 @@ export default function LandingPage() {
       <section className="min-h-screen grid md:grid-cols-2">
         <div className="relative h-[60vh] md:h-auto overflow-hidden">
           <ParallaxImage src={HERO_IMAGES.split1} className="absolute inset-0" speed={-0.3} />
-          <div className="absolute inset-0 bg-neutral-950/40" />
+          <div className="absolute inset-0 bg-linear-to-r from-violet-950/60 to-amber-950/40" />
         </div>
-        <div className="flex items-center px-8 md:px-16 py-24 bg-neutral-950">
+        <div className="flex items-center px-8 md:px-16 py-24 bg-linear-to-br from-neutral-950 to-violet-950/30">
           <RevealSection>
-            <p className="text-xs tracking-[0.3em] uppercase text-neutral-500 mb-6">Track</p>
+            <p className="text-xs tracking-[0.3em] uppercase text-emerald-400 mb-6">Track</p>
             <h3 className="text-3xl md:text-4xl font-extralight mb-6 leading-tight">
               Build your reading history into a living archive
             </h3>
@@ -199,7 +199,7 @@ export default function LandingPage() {
             </p>
             <Link
               href="/books"
-              className="text-xs tracking-[0.2em] uppercase border-b border-neutral-100 pb-1 hover:opacity-60 transition-opacity"
+              className="text-xs tracking-[0.2em] uppercase border-b border-emerald-400 text-emerald-400 pb-1 hover:text-emerald-300 hover:border-emerald-300 transition-colors"
             >
               Explore Library
             </Link>
@@ -209,9 +209,9 @@ export default function LandingPage() {
 
       {/* Reverse Split Section - Share */}
       <section className="min-h-screen grid md:grid-cols-2">
-        <div className="flex items-center px-8 md:px-16 py-24 bg-neutral-900 order-2 md:order-1">
+        <div className="flex items-center px-8 md:px-16 py-24 bg-linear-to-br from-neutral-900 to-rose-950/20 order-2 md:order-1">
           <RevealSection>
-            <p className="text-xs tracking-[0.3em] uppercase text-neutral-500 mb-6">Share</p>
+            <p className="text-xs tracking-[0.3em] uppercase text-rose-400 mb-6">Share</p>
             <h3 className="text-3xl md:text-4xl font-extralight mb-6 leading-tight">
               Transform thoughts into conversations
             </h3>
@@ -221,7 +221,7 @@ export default function LandingPage() {
             </p>
             <Link
               href="/feed"
-              className="text-xs tracking-[0.2em] uppercase border-b border-neutral-100 pb-1 hover:opacity-60 transition-opacity"
+              className="text-xs tracking-[0.2em] uppercase border-b border-rose-400 text-rose-400 pb-1 hover:text-rose-300 hover:border-rose-300 transition-colors"
             >
               View Feed
             </Link>
@@ -229,12 +229,12 @@ export default function LandingPage() {
         </div>
         <div className="relative h-[60vh] md:h-auto overflow-hidden order-1 md:order-2">
           <ParallaxImage src={HERO_IMAGES.split2} className="absolute inset-0" speed={0.3} />
-          <div className="absolute inset-0 bg-neutral-950/40" />
+          <div className="absolute inset-0 bg-linear-to-l from-rose-950/60 to-violet-950/40" />
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="py-32 bg-neutral-950">
+      <section className="py-32 bg-linear-to-b from-neutral-950 via-indigo-950/20 to-neutral-950">
         <div className="max-w-7xl mx-auto px-8">
           <RevealSection className="grid grid-cols-3 gap-8 text-center">
             {STATS.map((stat, i) => (
@@ -245,8 +245,8 @@ export default function LandingPage() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.2, duration: 0.8 }}
               >
-                <div className="text-5xl md:text-7xl font-extralight mb-2">{stat.value}</div>
-                <div className="text-xs tracking-[0.2em] uppercase text-neutral-500">
+                <div className="text-5xl md:text-7xl font-extralight mb-2 text-gradient-warm">{stat.value}</div>
+                <div className="text-xs tracking-[0.2em] uppercase text-violet-300">
                   {stat.label}
                 </div>
               </motion.div>
@@ -256,13 +256,13 @@ export default function LandingPage() {
       </section>
 
       {/* Quote Section */}
-      <section className="py-32 bg-neutral-900">
+      <section className="py-32 bg-linear-to-br from-neutral-900 via-amber-950/20 to-neutral-900">
         <RevealSection className="max-w-4xl mx-auto px-8 text-center">
-          <blockquote className="text-2xl md:text-4xl font-extralight leading-relaxed text-neutral-300">
+          <blockquote className="text-2xl md:text-4xl font-extralight leading-relaxed bg-linear-to-r from-amber-200 via-rose-200 to-violet-200 bg-clip-text text-transparent">
             &ldquo;A reader lives a thousand lives before he dies. The man who never reads lives
             only one.&rdquo;
           </blockquote>
-          <p className="mt-8 text-xs tracking-[0.2em] uppercase text-neutral-500">
+          <p className="mt-8 text-xs tracking-[0.2em] uppercase text-amber-500">
             — George R.R. Martin
           </p>
         </RevealSection>
@@ -275,10 +275,10 @@ export default function LandingPage() {
             src={HERO_IMAGES.cta}
             alt="Books"
             fill
-            className="object-cover grayscale opacity-30"
+            className="object-cover opacity-50"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-linear-to-t from-neutral-950 via-neutral-950/80 to-neutral-950/60" />
+          <div className="absolute inset-0 bg-linear-to-t from-neutral-950 via-violet-950/70 to-amber-950/40" />
         </div>
 
         <RevealSection className="relative z-10 text-center px-8">
@@ -295,7 +295,7 @@ export default function LandingPage() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-16 py-6 bg-neutral-100 text-neutral-950 text-xs tracking-[0.2em] uppercase hover:bg-neutral-200 transition-colors"
+                className="px-16 py-6 bg-linear-to-r from-amber-500 to-rose-500 text-neutral-950 text-xs tracking-[0.2em] uppercase hover:from-amber-400 hover:to-rose-400 transition-all glow-amber font-medium"
               >
                 Create Account
               </motion.button>
@@ -305,31 +305,31 @@ export default function LandingPage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-16 bg-neutral-950 border-t border-neutral-900">
+      <footer className="py-16 bg-neutral-950 border-t border-violet-900/30">
         <div className="max-w-7xl mx-auto px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-            <div className="text-xl font-light tracking-[0.2em] uppercase">BookDb</div>
+            <div className="text-xl font-light tracking-[0.2em] uppercase text-gradient">BookDb</div>
             <div className="flex items-center gap-8">
               <Link
                 href="/books"
-                className="text-xs tracking-[0.15em] uppercase text-neutral-500 hover:text-neutral-100 transition-colors"
+                className="text-xs tracking-[0.15em] uppercase text-neutral-400 hover:text-amber-400 transition-colors"
               >
                 Library
               </Link>
               <Link
                 href="/feed"
-                className="text-xs tracking-[0.15em] uppercase text-neutral-500 hover:text-neutral-100 transition-colors"
+                className="text-xs tracking-[0.15em] uppercase text-neutral-400 hover:text-rose-400 transition-colors"
               >
                 Feed
               </Link>
               <Link
                 href="/profile"
-                className="text-xs tracking-[0.15em] uppercase text-neutral-500 hover:text-neutral-100 transition-colors"
+                className="text-xs tracking-[0.15em] uppercase text-neutral-400 hover:text-violet-400 transition-colors"
               >
                 Profile
               </Link>
             </div>
-            <div className="text-xs text-neutral-600">© 2026 BookDb</div>
+            <div className="text-xs text-neutral-500">© 2026 BookDb</div>
           </div>
         </div>
       </footer>
