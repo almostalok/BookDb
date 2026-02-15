@@ -28,6 +28,7 @@ export default function LandingPage() {
       <BentoGrid />
       <BookShowcase />
       <BookShowcase/>
+      <BookShowcase/>
     </div>
   );
 }
