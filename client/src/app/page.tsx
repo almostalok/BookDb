@@ -31,7 +31,9 @@ export default function LandingPage() {
       <BookShowcase/>
       <BookShowcase/>
       <BookShowcase/>
-      <BookShowcase/>    </div>
+      <BookShowcase/>  
+      <BookShowcase/>
+        </div>
   );
 }
 
