@@ -27,13 +27,7 @@ export default function LandingPage() {
       <Hero3D />
       <BentoGrid />
       <BookShowcase />
-      <BookShowcase/>
-      <BookShowcase/>
-      <BookShowcase/>
-      <BookShowcase/>
-      <BookShowcase/>  
-      <BookShowcase/>
-      <BookShowcase/>
+      
         </div>
   );
 }
