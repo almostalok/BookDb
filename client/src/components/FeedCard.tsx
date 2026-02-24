@@ -10,13 +10,20 @@ export function FeedCard({
   content: string;
 }) {
   return (
-    <div className="rounded-xl border border-rose-500/20 bg-linear-to-r from-rose-900/10 to-violet-900/10 p-4 hover:border-rose-400/40 transition-all">
-      <p className="text-sm font-medium text-neutral-200">
-        <span className="text-amber-400">{user}</span>{" "}
-        <span className="text-neutral-500">{action}</span>{" "}
-        <span className="italic text-violet-300">{book}</span>
-      </p>
-      <p className="mt-2 text-sm text-neutral-400">{content}</p>
+    <div className="card-luxury !rounded-2xl p-6 group">
+      <div className="flex items-start gap-4">
+        {/* Avatar */}
+        <div className="w-9 h-9 rounded-full bg-gradient-to-br from-[#C9A96E]/20 to-[#A68B4B]/20 border border-[#C9A96E]/10 flex-shrink-0" />
+        
+        <div className="flex-1 min-w-0">
+          <p className="text-sm text-[#FDFBF7]/70 leading-relaxed">
+            <span className="text-[#C9A96E] font-medium">{user}</span>{" "}
+            <span className="text-[#FDFBF7]/30">{action}</span>{" "}
+            <span className="font-[family-name:var(--font-playfair)] italic text-[#FDFBF7]/55">{book}</span>
+          </p>
+          <p className="mt-2 text-sm text-[#FDFBF7]/25 leading-relaxed font-light">{content}</p>
+        </div>
+      </div>
     </div>
   );
 }
