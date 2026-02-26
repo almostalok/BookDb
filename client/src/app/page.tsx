@@ -48,11 +48,11 @@ export default function LandingPage() {
   return (
     <div className="flex flex-col overflow-x-hidden">
       <HeroSection />
-      <HeroSection/>
       <StatsBar />
       <FeaturesSection />
       <CuratedCollection />
       <TestimonialSection />
+      <TestimonialSection/>
       <CTASection />
     </div>
   );
