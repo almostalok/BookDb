@@ -1,18 +1,34 @@
-# BookDB
+# 📚 BookDB
 
-A social-first platform where reading is visible, trackable, and shareable. Think of it as a modern Goodreads — built for the social-media generation.
+> **BookDB** is a social-first reading platform where books are not just read — they are tracked, reviewed, and shared.
 
-## Features (MVP)
+Think of it as a modern blend of Goodreads + social feed, designed for readers who love discovering books through people.
 
-- **User Authentication** — Email/password sign-up and Google OAuth
-- **Book Database** — Browse, search, and filter books by genre, author, and popularity
-- **Reading Tracker** — Mark books as *Want to Read*, *Reading*, *Completed*, or *Dropped*
-- **Reviews & Ratings** — Write reviews and rate books
-- **User Profiles** — Public profiles showing reading stats, lists, and reviews
-- **Follow System** — Follow other readers and build your social reading graph
-- **Activity Feed** — See what your followed readers are currently reading and reviewing
+---
 
-## Tech Stack
+## ✨ Why BookDB?
+
+BookDB helps readers:
+- Track their reading journey
+- Share reviews and ratings
+- Build a public reading identity
+- Follow other readers and discover their next favorite book
+
+---
+
+## 🚀 MVP Features
+
+- 🔐 **Authentication** — Email/password + Google OAuth
+- 🔎 **Book Discovery** — Search and browse by title, genre, author, and popularity
+- 📖 **Reading Tracker** — Organize books into *Want to Read*, *Reading*, *Completed*, and *Dropped*
+- ⭐ **Reviews & Ratings** — Post opinions, ratings, and reactions
+- 👤 **Profiles** — Public reader profiles with stats and reading activity
+- 🤝 **Follow System** — Follow readers and grow your social graph
+- 📰 **Activity Feed** — Stay updated on what your network is reading and reviewing
+
+---
+
+## 🧱 Tech Stack
 
 | Layer | Technology |
 |---|---|
@@ -26,23 +42,27 @@ A social-first platform where reading is visible, trackable, and shareable. Thin
 | Frontend Hosting | Vercel |
 | Backend Hosting | Railway / Render |
 
-## Project Structure
+---
 
-```
+## 🗂️ Project Structure
+
+```text
 BookDb/
-├── client/          # Next.js frontend
-├── server/          # Node.js + Express backend
-└── Docs/            # Architecture, schema, and planning documents
+├── client/   # Next.js frontend
+├── server/   # Node.js + Express backend
+└── Docs/     # Product, architecture, and implementation docs
 ```
 
-## Getting Started
+---
+
+## ⚙️ Getting Started
 
 ### Prerequisites
 
 - Node.js 18+
-- PostgreSQL database (e.g. [Neon](https://neon.tech) or [Supabase](https://supabase.com))
+- PostgreSQL database (for example [Neon](https://neon.tech) or [Supabase](https://supabase.com))
 
-### Client (Frontend)
+### 1) Run the Client
 
 ```bash
 cd client
@@ -50,46 +70,46 @@ npm install
 npm run dev
 ```
 
-The app will be available at ``.
+Client runs on: `http://localhost:3000`
 
-### Server (Backend)
-
-1. Copy the environment file and fill in your values:
+### 2) Run the Server
 
 ```bash
 cd server
-cp .env.example .env
-```
-
-2. Install dependencies and start the dev server:
-
-```bash
 npm install
 npm run dev
 ```
 
-The API will be available at `http://localhost:5000` (or the port configured in `.env`).
+Create or update `server/.env` with your local configuration before starting the server.
 
-## Documentation
+API runs on: `http://localhost:5000` (or the port configured in `.env`)
 
-Detailed documentation lives in the [`Docs/`](./Docs) folder:
+---
 
-- [PRD](./Docs/PRD.md) — Product Requirements Document
-- [Tech Stack](./Docs/TECH_STACK.md) — Full technology breakdown
-- [Architecture](./Docs/ARCHITECTURE.md) — System design overview
-- [Database Schema](./Docs/DATABASE_SCHEMA.md) — Tables and relationships
-- [User Flow](./Docs/USER_FLOW.md) — Page-by-page user journey
-- [Development Plan](./Docs/DEVELOPMENT_PLAN.md) — Phased roadmap
+## 📘 Documentation
 
-## Roadmap
+Detailed docs are available in [`Docs/`](./Docs):
+
+- [PRD](./Docs/PRD.md) — Product requirements
+- [Tech Stack](./Docs/TECH_STACK.md) — Technology choices
+- [Architecture](./Docs/ARCHITECTURE.md) — System design
+- [Database Schema](./Docs/DATABASE_SCHEMA.md) — Data model and relationships
+- [User Flow](./Docs/USER_FLOW.md) — UX flow across the app
+- [Development Plan](./Docs/DEVELOPMENT_PLAN.md) — Implementation phases
+
+---
+
+## 🛣️ Roadmap
 
 | Phase | Focus |
 |---|---|
-| Phase 1 | Repo setup, Next.js & Express scaffolding, PostgreSQL connection |
-| Phase 2 | Auth, user profiles, book pages, reading tracker |
+| Phase 1 | Repo setup, Next.js and Express scaffolding, PostgreSQL connection |
+| Phase 2 | Auth, profiles, book pages, reading tracker |
 | Phase 3 | Follow system, activity feed, reviews |
 | Phase 4 | Redis caching, Meilisearch integration, performance tuning |
 
-## License
+---
 
-This project is currently unlicensed — all rights reserved by the author.
+## 📄 License
+
+This project is currently **unlicensed** — all rights reserved by the author.
